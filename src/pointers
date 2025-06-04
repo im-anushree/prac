@@ -1,0 +1,12 @@
+use str.length for arrays
+use str.length() for string
+char c = 'a' not "a"
+use str.equals() for string
+ch == for char
+str=str+str2.charAt(1) string concat possible
+num=str.charAt(i)-48;
+
+for string and array of string, index starts with 0 but length starts with 1
+so to get last char in string:
+str.charAt(str.length()-1)--> str is string
+str.charAt(str.length-1)----> str is array
