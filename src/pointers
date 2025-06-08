@@ -8,7 +8,7 @@ StringBuffer s1=new StringBuffer("rattaiah");
 s1.append("addanki");//mutability
 System.out.println(s1);
 
-Unlie stringbuffer Stringbuilder is not Syncronised i.e thread safe hence multiple threads are allowed to operate on StringBuilder methods increasing performance
+Unlike stringbuffer Stringbuilder is not Syncronised i.e thread safe hence multiple threads are allowed to operate on StringBuilder methods increasing performance
 
 
 Throwable is the superclass of all errors and exceptions
@@ -24,3 +24,14 @@ for string and array of string, index starts with 0 but length starts with 1
 so to get last char in string:
 str.charAt(str.length()-1)--> str is string
 str.charAt(str.length-1)----> str is array
+
+
+Need ordered elements? → List (ArrayList/LinkedList)
+
+Need unique elements? → Set (HashSet/TreeSet)
+
+Need key-value pairs? → Map (HashMap/TreeMap)
+
+Need FIFO processing? → Queue (LinkedList/PriorityQueue)
+
+Need LIFO processing? → Deque (ArrayDeque - use as stack)
