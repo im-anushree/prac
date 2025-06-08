@@ -1,7 +1,21 @@
 use str.length for arrays
 use str.length() for string
 char c = 'a' not "a"
-use str.equals() for string
+use str.equals() for string for string content comparision: immutable
+use str.equal()  for stringbuffer for string reference comparision: mutable
+stringbuffer is thread safe
+StringBuffer s1=new StringBuffer("rattaiah");
+s1.append("addanki");//mutability
+System.out.println(s1);
+
+Unlie stringbuffer Stringbuilder is not Syncronised i.e thread safe hence multiple threads are allowed to operate on StringBuilder methods increasing performance
+
+
+Throwable is the superclass of all errors and exceptions
+
+
+
+
 ch == for char
 str=str+str2.charAt(1) string concat possible
 num=str.charAt(i)-48;
