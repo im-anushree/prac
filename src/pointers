@@ -2,7 +2,7 @@ use str.length for arrays
 use str.length() for string
 char c = 'a' not "a"
 use str.equals() for string for string content comparision: immutable
-use str.equal()  for stringbuffer for string reference comparision: mutable
+use str.equals()  for stringbuffer for string reference comparision: mutable
 stringbuffer is thread safe
 StringBuffer s1=new StringBuffer("rattaiah");
 s1.append("addanki");//mutability
@@ -35,3 +35,170 @@ Need key-value pairs? → Map (HashMap/TreeMap)
 Need FIFO processing? → Queue (LinkedList/PriorityQueue)
 
 Need LIFO processing? → Deque (ArrayDeque - use as stack)
+
+**************************************************************
+ // str = abcxyz
+        //res=axbycz
+for(int i = 0; i<str.length()/2;i++)
+{
+    result=result+str.charAt(i);
+    result=result+str.charAt((str.length()/2)+i);
+ }
+****************************************************************
+for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++){
+                if (arr[i]>arr[j]){
+                    int temp = arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+
+*************************************************************
+public class StoreZeroesToOneEnd {
+public static void main(String[] args) {
+int a[]= {1,0,2,0,3,0,0,4};
+int b[]= new int[a.length];
+int m=0;
+int n=a.length-1;
+for(int i=0;i<a.length;i++)
+{
+if(a[i]==0)
+{
+b[n]=a[i];
+n--;
+}
+else
+{
+b[m]=a[i];
+m++;
+}
+}
+for(int i=0; i<b.length; i++)
+{
+System.out.print(b[i]+" ");
+}
+} O/P-1 2 3 4 0 0 0 0
+
+
+/////////////////////
+
+7. What are Maven build lifecycle phases?
+Answer:
+There are 3 major lifecycles:
+
+clean – Cleans previous builds (clean)
+
+default – Main lifecycle (compile, test, package, install, deploy)
+
+site – Generates documentation (site, site-deploy)
+
+////////////////////////////////////////
+Command	What it does
+mvn clean	Deletes target/ folder
+mvn compile	Compiles the Java source code
+mvn test	Runs test cases using JUnit/TestNG
+mvn package	Creates .jar or .war in target/
+mvn install	Adds built file to local repo
+mvn deploy	Uploads it to remote repo
+mvn site	Generates documentation
+
+
+wrapper class
+
+Obj to Primitive(Autounboxing)
+  no strings:
+ xxxValueOf()
+ content.intValueOf()
+ content.shortValueOf()
+ content.floatValueOf()
+
+ string:
+ int a = Integer.parseInt(str1)
+ int float= Float.parseFloat(str1)
+
+Primitive to Obj(Autoboxing)
+primitive(all) to obj
+Boolean b = Boolean.valueOf("true");
+
+
+Serialization- Interfacr
+saving object to a file/network
+FileOutputStream
+ObjectOutputStream
+
+Ex:-Student.java
+import java.io.Serializable;
+public class Student implements Serializable
+{
+int id;
+String name;
+int marks;
+public Student(int id, String name,int marks)
+{
+this.id = id;
+this.name = name;
+this.marks=marks;
+}
+}
+To perform serialization :- we are writing the object data to the file called abc.txt file we are transferring that file across the network.
+import java.io.*;
+class Serializable1
+{
+public static void main(String args[])throws Exception
+{
+Student s1 =new Student(211,"ravi",100);
+FileOutputStream fos=new FileOutputStream("abc.txt",true);
+ObjectOutputStream oos=new ObjectOutputStream(fos);
+oos.writeObject(s1);
+oos.flush();
+System.out.println("Serializable process success");
+}
+}
+
+
+Deserialization
+reading object from a supported  file/network
+FileInputStream
+ObjectInputStream
+
+{
+//deserialization process
+FileInputStream fis=new FileInputStream("abc.txt");
+ObjectInputStream ois=new ObjectInputStream(fis);
+Student s=(Student)ois.readObject();
+System.out.println("the student name is:"+s.name);
+System.out.println("the stuent id is:"+s.id);
+System.out.println("the student marks:"+s.marks);
+System.out.println("deserialization success");
+
+
+
+
+
+////////////////Collections////////////////////////
+Array
+heterogenous
+fized size
+
+Linked List                                     Array List
+doubly linked based structure                    Resizable array
+Data---nextpointer---previous pointer
+
+Best for insertion/deletion                     Random access
+hence good performance on large scale
+
+LinkedList<String> cities = new LinkedList<>();
+cities.add("Delhi");
+
+HashM                   LinkedHashM                      TreeMap
+No insertion order      Insertion order maintained      sorted order
+1null key allowed       same                            no null key
+fastest                 fast                            slowest
+
+Map<String, Integer> ageMap = new HashMap<>();
+ageMap.put("key", value);
+
+
+
+
