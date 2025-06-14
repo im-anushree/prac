@@ -1,21 +1,19 @@
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
-public class prac{
-    public static void main(String[] args){
-        try{
-            int data;
-            FileInputStream input = new FileInputStream("src/prac/fileToRead.txt");
-            FileOutputStream output = new FileOutputStream("fileToWrite.txt");
+ class prac extends Exception{
+    public  prac(String message){
+        super(message);
+    }
+   }
 
-            while((data =input.read()) != -1){
-                output.write(data);
-            }
-            input.close();
-            output.close();}
-catch(IOException e){
-    e.printStackTrace();
-            }
-        }}
+    class Test {
+       public static void main(String[] args) {
+           try{
+               throw new prac("Anu's exception");
+
+           }catch(prac e){
+               System.out.println("Anu's exception caught");
+              System.out.println("exception is "+e.getMessage());
+           }
+       }
+   }
