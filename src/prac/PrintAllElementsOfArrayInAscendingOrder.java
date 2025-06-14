@@ -1,3 +1,5 @@
+package prac;
+
 public class PrintAllElementsOfArrayInAscendingOrder {
     public static void main(String[] args) {
         int arr[] = {11, 12, 13, 15,10};

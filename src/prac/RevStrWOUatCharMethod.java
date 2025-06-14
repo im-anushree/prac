@@ -1,4 +1,4 @@
-//reverse string without using charAt method
+package prac;//reverse string without using charAt method
 
 import java.util.Scanner;
 

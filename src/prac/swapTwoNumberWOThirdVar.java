@@ -1,3 +1,5 @@
+package prac;
+
 public class swapTwoNumberWOThirdVar {
     public static void main(String[] args){
 

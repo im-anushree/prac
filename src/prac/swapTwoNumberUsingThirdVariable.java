@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package prac;
 
 public class swapTwoNumberUsingThirdVariable {
     public static void main(String[] args){

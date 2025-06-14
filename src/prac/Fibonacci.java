@@ -1,3 +1,5 @@
+package prac;
+
 public class Fibonacci {
     public static void main(String[] arge){
         int n1=0;

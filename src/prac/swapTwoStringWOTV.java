@@ -1,4 +1,4 @@
-//swap two string without third variable
+package prac;//swap two string without third variable
 
 public class swapTwoStringWOTV {
     public static void main(String[] args) {

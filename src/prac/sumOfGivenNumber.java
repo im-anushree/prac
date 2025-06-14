@@ -1,3 +1,5 @@
+package prac;
+
 import java.util.Scanner;
 //WAPT give sum of each digit in a given number
 
