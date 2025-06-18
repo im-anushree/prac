@@ -3,6 +3,22 @@ use str.length for arrays
 use str.size() for arrayList
 
 char c = 'a' not "a"
+str.charAt(i); not str.charAt[i]
+if(str.charAt(i) >= 0 && str.charAt(i) <= 9)
+This checks if the character’s Unicode/ASCII value is between 0 and 9, which is not what you want.
+
+✅ Correct Condition:  if(str.charAt(i) >= '0' && str.charAt(i) <= '9')
+
+String reversedWord = new StringBuilder(word).reverse(); // ❌ Compile-time error
+String reversedWord = new StringBuilder(word).reverse().toString();// Need to convert StringBuilder object to string
+
+
+How can sb.append(c); work if sb is a StringBuilder and c is a char?
+Yes, sb is a reference to a StringBuilder object, and c is a char. But that's not a problem at all because:
+
+👉 The StringBuilder class has multiple overloaded append() methods that accept different data types, including char.
+
+
 use str.equals() for string for string content comparision: immutable
 use str.equals()  for stringbuffer for string reference comparision: mutable
 stringbuffer is thread safe
@@ -217,6 +233,5 @@ Occurance in map
 for(char ch : str.toCharArray(){
 freqmap.put(ch,freqmap.getOrDefault(ch,0)+1)
 }
-
 
 
